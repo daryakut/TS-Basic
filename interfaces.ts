@@ -53,16 +53,49 @@ class Clock implements IClock {
   }
 }
 
+interface ICar {
+  make: string;
+  year: number;
+}
+
+// class Car implements ICar {
+//   make: string;
+//   year: number;
+
+//   ride() {
+//     console.log("Car of make " + this.make + " rides");
+//   }
+
+//   constructor(make: string, year: number) {
+//     this.make = make;
+//     this.year = year;
+//   }
+// }
+
+// const beha = new Car("BMW", 2015);
+// const zapor = new Car("Zaporozhenc", 1990);
+
+// console.log(beha, zapor);
+// beha.ride();
+
+
+
+const myClock = new Clock();
+const c2 = new Clock();
+console.log(myClock);
+console.log(c2);
+
 //////////////
 
 interface Styles {
-  [key: string]: string;
+  [key: string | number]: string | number;
 }
 
 const css: Styles = {
   border: "1px solid black",
   marginTop: "2px",
   borderRadius: "5px",
+  5: 7,
 };
 
 // interface Styles — интерфейс с индексируемыми свойствами. Это означает, что в объекте, соответствующем интерфейсу Styles, ключи могут быть произвольными строками, а значения — строками.

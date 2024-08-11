@@ -11,22 +11,22 @@ class TypeScript {
 const ts = new TypeScript("4.7");
 console.log(ts.info("My Project")); // Выведет: [My Project]: TypeScript version is 4.7
 
-// class Car {
-//   readonly model: string;
-//   readonly numberOfWheels: number = 4;
+class Car {
+  readonly model: string;
+  readonly numberOfWheels: number = 4;
 
-//   constructor(theModel: string) {
-//     this.model = theModel;
-//   }
-// }
+  constructor(model: string) {
+    this.model = model;
+  }
+}
 
 //Альтернативный вариант с модификатором readonly
 
-class Car {
+class Car2 {
   readonly numberOfWheels: number = 4;
   constructor(readonly model: string) {}
 }
-const car = new Car("Toyota");
+const car = new Car2("Toyota");
 console.log(car.model); // Выведет: Toyota
 console.log(car.numberOfWheels); // Выведет: 4
 

@@ -4,9 +4,12 @@ enum Membership {
   Premium,
 }
 const membership = Membership.Standart;
+
 const membershipReverse = Membership[2];
 console.log(membership);
+console.log(typeof membership) //number
 console.log(membershipReverse);
+console.log(typeof membershipReverse)
 
 enum SocialMedia {
   VK = "VK",
